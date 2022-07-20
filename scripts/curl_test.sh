@@ -10,3 +10,4 @@ echo "Checking '/health' page..."
 response2=$(curl --write-out '%{http_code}' --silent --output /dev/null "http://localhost:1880/health")
 echo "HTTP Response: $response2"
 if [[ $response2 = 200 ]]; then echo "Success"; else echo "Failed" && exit 1; fi
+
